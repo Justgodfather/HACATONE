@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: linear-gradient(#a6d8ff, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.dark {
+  background: #222833;
+}
+.dark .sun {
+  left: 15%;
+}
+.dark .sun::before {
+  content: " ";
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  background: #222833;
+  border-radius: 50%;
+}
+.sun {
+  position: absolute;
+  top: 140px;
+  left: 87%;
+  transform: translatex(-51%);
+  width: 7%;
+  height: 16%;
+  background: #fff;
+  border-radius: 100%;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background: #fff;
+  margin: 50px;
+  /* ! Пробую GRID */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 1);
+}
+/* !Начало Левого блока */
+.container .left__side {
+  position: relative;
+  background: #003147;
+  padding: 40px;
+}
+
+.profile__text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profile__text .images {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 1s;
+}
+.images:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.profile__text .images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile__text h2 {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+  transition: 0.3s;
+}
+.profile__text h2:hover {
+  transform: scale(1.2);
+  color: gold;
+}
+.profile__text h2 span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.contactInfo {
+  padding-top: 40px;
+}
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px; /* !определяет межбуквенное расстояние в тексте*/
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.title:hover {
+  transform: scale(1.1);
+  color: gold;
+}
+
+.contactInfo ul {
+  position: relative;
+}
+.contactInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 20px;
+  color: gold;
+  transition: 1s;
+}
+.contactInfo ul li .contactIcon:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+}
+.contactInfo ul li span {
+  color: white;
+  font-weight: 300;
+}
+.contactInfo.education li {
+  margin-bottom: 15px;
+}
+.contactInfo.education h5 {
+  color: #03a9f4;
+  font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+.contactInfo.education h4 {
+  color: #fff;
+  font-weight: 300;
+}
+.contactInfo.languages .parcend {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #081921;
+  display: block;
+  margin-top: 5px;
+}
+.contactInfo.languages .parcend div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+
+/* ! Конец левого блока */
+
+/* Начало ПРАВОГО БЛОКА */
+
+.container .right__side {
+  position: relative;
+  background: #fff;
+  padding: 40px;
+  background: linear-gradient(90deg);
+  animation: Gradient 15s ease infinite;
+}
+@keyframes Gradient {
+  0% {
+    background: #b7e9e9;
+  }
+  20% {
+    background: #98cedf;
+  }
+  30% {
+    background: #7de0e0;
+  }
+  40% {
+    background: #a9ebf0;
+  }
+  60% {
+    background: #c1ebee;
+  }
+  80% {
+    background: #ccf3f5;
+  }
+  100% {
+    background: #cef7f7;
+  }
+}
+.abaut {
+  margin-bottom: 50px;
+}
+.abaut:last-child {
+  margin-bottom: 0;
+}
+.title2 {
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+p {
+  color: #333;
+}
+.abaut .box {
+  display: flex;
+  text-decoration: row;
+  margin: 20px 0;
+}
+.abaut .box .year__company {
+  min-width: 150px;
+}
+.abaut .box .year__company h5 {
+  text-transform: uppercase;
+  color: #2b2e30;
+  font-weight: bold;
+}
+.abaut .box .text h4 {
+  text-transform: uppercase;
+  color: #1c688b;
+  font-size: 17px;
+}
+.skills .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.skills .box h4 {
+  text-transform: uppercase;
+  color: #848c99;
+  font-weight: 500;
+}
+.skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+}
+.skills .box .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.interest ul li {
+  list-style: none;
+  color: #333;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.interest ul li.fa {
+  color: #03a9f4;
+  font-size: 18px;
+  width: 20px;
+}
+/* Конец правого блока */
