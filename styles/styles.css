@@ -11,6 +11,7 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+/* Backgraund завтавка начало */
 .dark {
   background: #222833;
 }
@@ -36,10 +37,10 @@ body {
   height: 16%;
   background: #fff;
   border-radius: 100%;
-
   cursor: pointer;
   transition: 0.2s;
 }
+/* Backgraund завтавка начало */
 
 .container {
   position: relative;
@@ -73,7 +74,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  overflow: hidden;
+  overflow: hidden; /* Переполнение обрезается, а остальное содержимое будет невидимым scroll*/
   transition: 1s;
 }
 .images:hover {
@@ -139,6 +140,10 @@ body {
   color: gold;
   transition: 1s;
 }
+a {
+  color: white;
+}
+
 .contactInfo ul li .contactIcon:hover {
   transform: scale(1.2); /* Увеличиваем масштаб */
 }
@@ -226,25 +231,25 @@ body {
 p {
   color: #333;
 }
-.abaut .box {
+.abaut .block {
   display: flex;
   text-decoration: row;
   margin: 20px 0;
 }
-.abaut .box .year__company {
+.abaut .block .year__company {
   min-width: 150px;
 }
-.abaut .box .year__company h5 {
+.abaut .block .year__company h5 {
   text-transform: uppercase;
   color: #2b2e30;
   font-weight: bold;
 }
-.abaut .box .text h4 {
+.abaut .block .text h4 {
   text-transform: uppercase;
   color: #1c688b;
   font-size: 17px;
 }
-.skills .box {
+.skills .block {
   position: relative;
   width: 100%;
   display: grid;
@@ -252,18 +257,18 @@ p {
   justify-content: center;
   align-items: center;
 }
-.skills .box h4 {
+.skills .block h4 {
   text-transform: uppercase;
   color: #848c99;
   font-weight: 500;
 }
-.skills .box .percent {
+.skills .block .percent {
   position: relative;
   width: 100%;
   height: 10px;
   background: #f0f0f0;
 }
-.skills .box .percent div {
+.skills .block .percent div {
   position: absolute;
   top: 0;
   left: 0;

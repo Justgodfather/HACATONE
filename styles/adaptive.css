@@ -2,23 +2,24 @@
   .container {
     margin: 10px;
     grid-template-columns: repeat(1, 1fr);
+    /*Repeat() — это нотация, которую можно использовать со свойствами grid-template-columns и grid-template-rows при создании большого количества столбцов или строк, чтобы упростить правила и сделать их короче и понятнее.1*/
   }
   .interest ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media all and (max-width: 600px) {
-  .abaut .box {
+  .abaut .block {
     flex-direction: column;
   }
-  .abaut .box .year__company {
+  .abaut .block .year__company {
     min-width: 150px;
     margin-bottom: 5px;
   }
   .interest ul {
     grid-template-columns: repeat(1, 1fr);
   }
-  .skills .box {
+  .skills .block {
     grid-template-columns: repeat(1, 1fr);
   }
 }
